@@ -2136,3 +2136,54 @@ Caused by: java.io.IOException: CreateProcess error=2, The system cannot find th
 
 !ENTRY org.eclipse.e4.ui.workbench 2 0 2025-12-25 14:52:53.140
 !MESSAGE Removing PartDescriptorImpl with the "org.eclipse.pde.runtime.RegistryBrowser" id and the "Plug-in Registry" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY org.eclipse.egit.core 4 0 2025-12-25 15:26:47.134
+!MESSAGE An exception occurred during push on URI https://github.com/pramodleela15-creator/Angara_App.git: https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/'
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/'
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:701)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:636)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1555)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-12-25 15:26:47.162
+!MESSAGE Can't connect to any repository: https://github.com/pramodleela15-creator/Angara_App.git (https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/')
+
+!ENTRY org.eclipse.egit.core 4 0 2025-12-25 15:27:33.212
+!MESSAGE An exception occurred during push on URI https://github.com/pramodleela15-creator/Angara_App.git: https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/'
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/'
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:701)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:636)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1555)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-12-25 15:27:33.216
+!MESSAGE Can't connect to any repository: https://github.com/pramodleela15-creator/Angara_App.git (https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/')
+
+!ENTRY org.eclipse.egit.core 4 0 2025-12-25 15:36:55.797
+!MESSAGE An exception occurred during push on URI https://github.com/pramodleela15-creator/Angara_App.git: https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/'
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/'
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:701)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:636)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1555)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-12-25 15:36:55.803
+!MESSAGE Can't connect to any repository: https://github.com/pramodleela15-creator/Angara_App.git (https://github.com/pramodleela15-creator/Angara_App.git: git-receive-pack not permitted on 'https://github.com/pramodleela15-creator/Angara_App.git/')
