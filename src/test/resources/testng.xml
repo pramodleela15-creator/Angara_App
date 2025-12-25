@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="VisualRegressionSuite">
+
+    <!-- Test 1: Chrome -->
+    <test name="Chrome_HomePageTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.HomePageVisualTest"/>
+        </classes>
+    </test>
+    
+    
+  <!--       Test 2: Firefox 
+    <test name="Chrome_HomePageTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.HomePageVisualTest"/>
+        </classes>
+    </test>
+    
+         Test 3: Edge 
+    <test name="Chrome_HomePageTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.HomePageVisualTest"/>
+        </classes>
+    </test>-->
+
+</suite>
+

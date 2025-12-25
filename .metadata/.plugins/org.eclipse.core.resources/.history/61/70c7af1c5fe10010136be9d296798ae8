@@ -1,0 +1,34 @@
+package utils;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class ImageCompareUtil {
+
+    // Compare two images pixel by pixel
+    public static boolean compareImages(String path1, String path2) {
+        try {
+            BufferedImage img1 = ImageIO.read(new File(path1));
+            BufferedImage img2 = ImageIO.read(new File(path2));
+
+            if (img1.getWidth() != img2.getWidth() || img1.getHeight() != img2.getHeight()) {
+                return false;
+            }
+
+            for (int y = 0; y < img1.getHeight(); y++) {
+                for (int x = 0; x < img1.getWidth(); x++) {
+                    if (img1.getRGB(x, y) != img2.getRGB(x, y)) {
+                        return false;
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+}

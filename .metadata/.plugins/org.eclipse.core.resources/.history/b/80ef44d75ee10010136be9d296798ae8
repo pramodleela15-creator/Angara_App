@@ -1,0 +1,54 @@
+package tests;
+
+import base.BaseTest;
+import pages.HomePage;
+import utils.FileUtil;
+import utils.ImageCompareUtil;
+import utils.ScreenshotUtil;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.io.File;
+
+public class HomePageVisualTest extends BaseTest {
+
+    @Test
+    public void compareHomePageScreenshotAcrossRuns() {
+
+        HomePage homePage = new HomePage(driver);
+        homePage.openHomePage();
+        homePage.waitForPageLoad();
+
+        String timestamp = FileUtil.getTimestamp();
+        String baseName = "AngaraHomePage";
+
+        String referencePath = "screenshots/passed/" + baseName + ".png";
+        String failedPath =
+                "screenshots/failed/" + baseName + "_" + timestamp + ".png";
+
+        File referenceImage = new File(referencePath);
+
+        // First run – create reference image
+        if (!referenceImage.exists()) {
+            ScreenshotUtil.captureFullPageScreenshot(driver, referencePath);
+            Assert.assertTrue(true, "Reference screenshot created successfully.");
+            return;
+        }
+
+        // Capture new screenshot for comparison
+        ScreenshotUtil.captureFullPageScreenshot(driver, failedPath);
+
+        boolean imagesMatch =
+                ImageCompareUtil.compareImages(referencePath, failedPath);
+
+        if (imagesMatch) {
+            FileUtil.deleteFile(failedPath);
+            Assert.assertTrue(true, "No UI changes detected. Test Passed.");
+        } else {
+            Assert.fail(
+                "UI differences detected. Screenshot saved in failed folder. Manual review required."
+            );
+        }
+    }
+}
