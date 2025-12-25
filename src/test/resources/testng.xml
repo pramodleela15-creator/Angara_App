@@ -9,7 +9,6 @@
         </classes>
     </test>
     
-    
   <!--       Test 2: Firefox 
     <test name="Chrome_HomePageTest">
         <parameter name="browser" value="chrome"/>
